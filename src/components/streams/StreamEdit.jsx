@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { editStream, fetchStream } from '../../actions';
 
+//stream form component
+import StreamForm from './StreamForm';
 import { connect } from 'react-redux';
 
 class StreamEdit extends Component {
@@ -11,7 +13,11 @@ class StreamEdit extends Component {
     if (!this.props.streams) {
       return <div>Loading...</div>;
     }
-    return <div>{this.props.streams.title}</div>;
+    return (
+      <div>
+        <h3>Edit a Stream</h3>
+      </div>
+    );
   }
 }
 const mapStateToProps = (state, ownProps) => {
